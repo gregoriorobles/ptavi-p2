@@ -13,8 +13,8 @@ class Calculadora():
 
 if __name__ == "__main__":
     try:
-        operando1 = int(sys.argv[1])
-        operando2 = int(sys.argv[3])
+        operando1 = float(sys.argv[1])
+        operando2 = float(sys.argv[3])
         operacion = sys.argv[2]
     except ValueError:
         sys.exit("Error: Non numerical parameters")
