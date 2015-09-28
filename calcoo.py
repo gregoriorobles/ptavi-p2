@@ -3,31 +3,27 @@
 
 import sys
 
-def plus(op1, op2):
-    """ Function to sum the operands """
-    return op1 + op2
 
 
-def minus(op1, op2):
-    """ Function to substract the operands """
-    return op1 - op2
-
-class Calculadora(self, suma, resta):
-    self.suma= plus
-    self.resta= minus
+class Calculadora():
+    def suma (self, op1, op2):
+        return op1 + op2
+    def resta (self, op1, op2):
+        return op1 - op2
 
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
-        operacion = int(sys.argv[2])
+        operacion = sys.argv[2]
     
-    if sys.argv[2] == "suma":
-        return Calculadora.suma
-    elif sys.arg[2] == "resta":
-        return Calculadora.resta
+    calcu = Calculadora()
+    if operacion == "suma":
+        resultado = calcu.suma(operando1,operando2)
+    elif operacion == "resta":
+        resultado = calcu.resta(operando1,operando2)
     else
-        "Operaciones validas SUMAS O RESTAS"
+        print("Operaciones validas SUMAS O RESTAS")
 
-    print (Calculadora)
+    print (resultado)
     
