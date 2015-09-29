@@ -10,8 +10,8 @@ import calcoohija
 if __name__ == "__main__":
     script, filename = argv
     with open(filename) as file:
-        calculator = calcoohija.CalculadoraHija()
+        calc = calcoohija.CalculadoraHija()
         for line in csv.reader(file):
             operation = line[0]
             numbers = line[1:]
-            calcplus.operating(calculator, operations, numbers)
+            calcplus.operating(calc, operations, numbers)
