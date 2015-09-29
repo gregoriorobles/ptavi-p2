@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-from sys import argv
+import sys
 import calcoohija
 import calcoo
 
@@ -14,9 +14,9 @@ def operating(calculator, operation, numbers):
 
 
 if __name__ == "__main__":
-    script, filename = argv
-    file = open(filename)
+    script, filename = sys.argv
     calculator = calcoohija.CalculadoraHija()
+    file = open(filename)
     for line in file.readlines():
         operation = line.split(',')[0]
         numbers = line.split(',')[1:]
