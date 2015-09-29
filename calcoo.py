@@ -9,8 +9,8 @@ class Calculadora:
     def __init__(self):
         self.operations = {"suma": self.sum, "resta": self.substraction}
 
-    def operating(self, calculator_operation, op1, op2):
-        return calculator_operation(op1, op2)
+    def operating(self, calc_operation, op1, op2):
+        return calc_operation(op1, op2)
 
     def sum(self, a, b):
         return a + b
@@ -19,10 +19,10 @@ class Calculadora:
         return a - b
 
 
-def do_operation(calculator, operation, op1, op2):
+def do_operation(calc, operation, op1, op2):
 
     try:
-        return calculator.operating(calculator.operations[operation],
+        return calc.operating(calc.operations[operation],
                                     op1, op2)
     except KeyError:
         sys.exit("Not allowed operation " + operation)
@@ -31,5 +31,5 @@ if __name__ == "__main__":
     op1 = calc.to_number(sys.argv[1])
     operation = sys.argv[2]
     op2 = calc.to_number(sys.argv[3])
-    calculator = Calculadora()
-    print(do_operation(calculator, operation, op1, op2))
+    calc = Calculadora()
+    print(do_operation(calc, operation, op1, op2))
