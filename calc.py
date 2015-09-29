@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-
 import sys
 
 
@@ -14,7 +11,7 @@ def to_number(num):
         else:
             return int(num)
     except:
-        sys.exit("Error")
+        sys.exit("Error: Non numerical parameters")
 
 
 def sum(op1, op2):
@@ -25,16 +22,17 @@ def substraction(op1, op2):
     return op1 - op2
 
 
-def do_operation(operation, op1, op2):
-    if operation == "suma":
-        print(sum(op1, op2))
-    elif operation == "resta":
-        print(substraction(op1, op2))
-    else:
-        print ("Not allowed operation ", operation)
+def do_operation(operations, operation, op1, op2):
+
+    try:
+        return operations[operation](op1, op2)
+    except KeyError:
+        sys.exit("Not allowed operation " + operation)
+
 
 if __name__ == "__main__":
+    operations = {"suma": sum, "resta": substraction}
     op1 = to_number(sys.argv[1])
     operation = sys.argv[2]
     op2 = to_number(sys.argv[3])
-    do_operation(operation, op1, op2)
+    print(do_operation(operations, operation, op1, op2))
