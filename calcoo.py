@@ -22,8 +22,7 @@ class Calculadora:
 def do_operation(calc, operation, op1, op2):
 
     try:
-        return calc.operating(calc.operations[operation],
-                                    op1, op2)
+        return calc.operating(calc.operations[operation], op1, op2)
     except KeyError:
         sys.exit("Not allowed operation " + operation)
 
