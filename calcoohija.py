@@ -27,5 +27,5 @@ if __name__ == "__main__":
     op1 = calc.to_number(sys.argv[1])
     operation = sys.argv[2]
     op2 = calc.to_number(sys.argv[3])
-    calculator = CalculadoraHija()
-    print(calcoo.do_operation(calculator, operation, op1, op2))
+    calc = CalculadoraHija()
+    print(calcoo.do_operation(calc, operation, op1, op2))
