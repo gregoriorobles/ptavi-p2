@@ -16,17 +16,15 @@ if __name__ == "__main__":
         calc= calcoohija.CalculadoraHija()
         print(operador)
         if operador == "suma":
-            while op <= palabra[-1] :
-                op=palabra[1]
-                op1=palabra[2]
-                 sum1=op+op1
-                for sum1 in palabra[:-1]
-                resultado=calc.suma(op,op1)
-        if operador == "resta":
-           resultado=calcu.resta(palabra[2:-1])
-        else:
-            sys.exit("MAL")
+            #while op <= palabra[-1] :
+                sum1=palabra[1]+palabra[2]
+                print (sum1)
+               # for sum1 in palabra[:-1]
+                #resultado=calc.suma(op,op1)
+        #if operador == "resta":
+         #  resultado=calcu.resta(palabra[2:-1])
+        #else:
+         #   sys.exit("MAL")
            
-        print(resultado)
+        #print(resultado)
      
-        
