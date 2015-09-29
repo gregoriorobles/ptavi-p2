@@ -19,7 +19,6 @@ class Calculadora:
         return a - b
 
 
-
 def do_operation(calculator, operation, op1, op2):
 
     try:
