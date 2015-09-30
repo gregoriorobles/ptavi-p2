@@ -22,9 +22,10 @@ if __name__ == "__main__":
                 sum1=calcu.suma (sum1, int(operaciones))
             print(sum1)
             
+        if operador == "resta":
             
-        #if operador == "resta":
-         #  resultado=calcu.resta(palabra[2:-1])
+            for operaciones in palabra[1:]
+                rest=calcu.resta(rest,int(operaciones))
         #else:
          #   sys.exit("MAL")
            
