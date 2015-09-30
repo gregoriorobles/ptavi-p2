@@ -5,7 +5,7 @@ import sys
 import calcoohija
 
 if __name__ == "__main__":
-  
+    try:
     leer = open(sys.argv[1],"r")
     lineas = leer.readlines()
     calcu= calcoohija.CalculadoraHija()
@@ -21,29 +21,30 @@ if __name__ == "__main__":
             print(sum1)
             
         if operador == "resta":
-            rest1= calcu.resta(int(palabra[1]), int(palabra[2]))
+            rest1= calcu.resta(float(palabra[1]), float(palabra[2]))
             for operaciones in palabra[3:]:
-                rest1=calcu.resta(rest1, int(operaciones))
+                rest1=calcu.resta(rest1, float(operaciones))
             print(rest1)
         
         if operador == "multiplica":
             mult=1
             for operaciones in palabra[1:]:
-                mult=calcu.multiplica(mult, int(operaciones))
+                mult=calcu.multiplica(mult, float(operaciones))
             print(mult)
         
         if operador == "divide":
-            if int(palabra[2])==0:
+            if float(palabra[2])==0:
                 sys.exit("Division by zero is not allowed")
             else:
-                div=calcu.divide(int(palabra[1]),int(palabra[2]))
+                div=calcu.divide(float(palabra[1]),float(palabra[2]))
             for operaciones in palabra[3:]:
-                if int(operaciones)==0:
+                if float(operaciones)==0:
                     sys.exit("Division by zero is not allowed")
                 else:
-                    div=calcu.divide(div, int(operaciones))
+                    div=calcu.divide(div, float(operaciones))
             print(div)
-
+    except ValueError:
+        sys.exit("Error: Non numerical parameters")
         #else:
          #   sys.exit("MAL")
            
