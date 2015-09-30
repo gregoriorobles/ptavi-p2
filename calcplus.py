@@ -23,9 +23,19 @@ if __name__ == "__main__":
             print(sum1)
             
         if operador == "resta":
-            
-            for operaciones in palabra[1:]
-                rest=calcu.resta(rest,int(operaciones))
+            rest1= calcu.resta(int(palabra[1]), int(palabra[2]))
+            for operaciones in palabra[3:]:
+                rest1=calcu.resta(rest1, int(operaciones))
+            print(rest1)
+        
+        if operador == "multiplica":
+            mult=1
+            for operaciones in palabra[1:]:
+                print(mult)
+                mult=calcu.multiplica(mult, int(operaciones))
+                print(mult)
+            print(mult)
+
         #else:
          #   sys.exit("MAL")
            
