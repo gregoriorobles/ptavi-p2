@@ -6,8 +6,9 @@ import csv
 import calcoohija
 if __name__ == "__main__":
     calcu= calcoohija.CalculadoraHija()
+    fichero=sys.argv[1]
     try:
-        with open('fichero.csv') as csvarchivo:
+        with open(fichero) as csvarchivo:
             lineas = csv.reader(csvarchivo)
             for linea in lineas:
                 print(linea)
