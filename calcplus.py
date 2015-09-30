@@ -7,20 +7,22 @@ import calcoohija
 if __name__ == "__main__":
     leer = open(sys.argv[1],"r")
     lineas = leer.readlines()
-
-    for linea in lineas:
+    calcu= calcoohija.CalculadoraHija()
+    for linea in (lineas):
         #print(linea[:-1])
-        palabra = linea.split(",")[:-1]
+        palabra = linea.split(",")
         #print (palabra) 
         operador=palabra[0]
-        calc= calcoohija.CalculadoraHija()
+       
         print(operador)
+       
         if operador == "suma":
-            #while op <= palabra[-1] :
-                sum1=palabra[1]+palabra[2]
-                print (sum1)
-               # for sum1 in palabra[:-1]
-                #resultado=calc.suma(op,op1)
+            sum1=0
+            for operaciones in palabra[1:]:
+                sum1=calcu.suma (sum1, int(operaciones))
+            print(sum1)
+            
+            
         #if operador == "resta":
          #  resultado=calcu.resta(palabra[2:-1])
         #else:
