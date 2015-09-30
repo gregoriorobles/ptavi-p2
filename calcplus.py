@@ -31,10 +31,20 @@ if __name__ == "__main__":
         if operador == "multiplica":
             mult=1
             for operaciones in palabra[1:]:
-                print(mult)
                 mult=calcu.multiplica(mult, int(operaciones))
-                print(mult)
             print(mult)
+        
+        if operador == "divide":
+            if int(palabra[2])==0:
+                sys.exit("Division by zero is not allowed")
+            else:
+                div=calcu.divide(int(palabra[1]),int(palabra[2]))
+            for operaciones in palabra[3:]:
+                if int(operaciones)==0:
+                    sys.exit("Division by zero is not allowed")
+                else:
+                    div=calcu.divide(div, int(operaciones))
+            print(div)
 
         #else:
          #   sys.exit("MAL")
