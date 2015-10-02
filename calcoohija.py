@@ -39,7 +39,8 @@ class CalculadoraHija(Calculadora):
         elif operacion == "divide":
             return self.division(op1, op2)
         else:
-            sys.exit('Operaciones admitidas: suma, resta, multiplicacion y division')
+            sys.exit('Operaciones admitidas: suma,' +
+                     + 'resta, multiplicacion y division')
 
 
 if __name__ == "__main__":
