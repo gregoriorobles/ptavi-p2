@@ -16,15 +16,15 @@ if __name__ == '__main__':
             print(line)
             Operacion = line[0]
             if Operacion == "sumar" or Operacion == "suma":
-                OperTotal = 0
+                OperacionTotal = 0
                 for next in line:
                     if next != "sumar" and next != "suma":
-                        Calculadora.introAgmt(OperTotal, next, Operacion)
-                        OperTotal = Calculadora.sumar()
+                        Calculadora.introAgmt(OperacionTotal, next, Operacion)
+                        OperacionTotal = Calculadora.sumar()
 
             if Operacion == "restar" or Operacion == "resta":
                 Entrar = True
-                OperTotal = 0
+                OperacionTotal = 0
                 for next in line:
                     if next != "restar" and next != "resta":
                         Siguiente = next
@@ -36,28 +36,28 @@ if __name__ == '__main__':
                             Siguiente = int(Siguiente)
                         except ValueError:
                             sys.exit("Non numerical parameters")
-                        Calculadora.introAgmt(OperTotal, Siguiente, Operacion)
-                        OperTotal = Calculadora.restar()
+                        Calculadora.introAgmt(OperacionTotal, Siguiente, Operacion)
+                        OperacionTotal = Calculadora.restar()
 
             if Operacion == "multiplicar" or Operacion == "multiplica":
-                OperTotal = 1
+                OperacionTotal = 1
                 for next in line:
                     if next != "multiplicar" and next != "multiplica":
-                        Calculadora.introAgmt(OperTotal, next, Operacion)
-                        OperTotal = Calculadora.multiplicar()
+                        Calculadora.introAgmt(OperacionTotal, next, Operacion)
+                        OperacionTotal = Calculadora.multiplicar()
             if Operacion == "dividir" or Operacion == "divide":
-                OperTotal = 1
+                OperacionTotal = 1
                 for next in line:
                     if next != "dividir" and next != "divide":
                         Siguiente = next
                         Primero = line[1]
                         if next == Primero:
-                            OperTotal = Siguiente
+                            OperacionTotal = Siguiente
                             Siguiente = 1
                         try:
                             Siguiente = int(Siguiente)
                         except ValueError:
                             sys.exit("Non numerical parameters")
-                        Calculadora.introAgmt(OperTotal, Siguiente, Operacion)
-                        OperTotal = Calculadora.dividir()
-            print(OperTotal)
+                        Calculadora.introAgmt(OperacionTotal, Siguiente, Operacion)
+                        OperacionTotal = Calculadora.dividir()
+            print(OperacionTotal)

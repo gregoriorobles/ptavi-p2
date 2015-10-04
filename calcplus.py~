@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
         if Operacion == "restar" or Operacion == "resta":
             Entrar = True
-            OperacionTotal = 0
+            OperacionTotal = 0;
             for next in line.split(","):
                 if next != "restar" and next != "resta":
                     Siguiente = next
@@ -42,7 +42,7 @@ if __name__ == '__main__':
                     OperacionTotal = Calculadora.restar()
 
         if Operacion == "multiplicar" or Operacion == "multiplica":
-            OperacionTotal = 1
+            OperacionTotal = 1;
             for next in line.split(","):
                 if next != "multiplicar" and next != "multiplica":
                     Calculadora.introAgmt(OperacionTotal, next, Operacion)

@@ -23,9 +23,9 @@ if __name__ == '__main__':
     Calculadora.introAgmt(sys.argv[1], sys.argv[3], sys.argv[2])
     if Calculadora.op == "dividir" or Calculadora.op == "divide":
         print(Calculadora.dividir())
-    if Calculadora.op == "multiplicar" or Calculadora.op == "multiplica":
+    if  Calculadora.op == "multiplicar" or Calculadora.op == "multiplica":
         print(Calculadora.multiplicar())
-    if Calculadora.op == "sumar" or Calculadora.op == "suma":
+    if  Calculadora.op == "sumar" or Calculadora.op == "suma":
         print(Calculadora.sumar())
-    if Calculadora.op == "restar" or Calculadora.op == "resta":
+    if  Calculadora.op == "restar" or Calculadora.op == "resta":
         print(Calculadora.restar())
