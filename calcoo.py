@@ -9,9 +9,12 @@ class CalculadoraPadre:
 	def restar(self):
 		return (self.a-self.b)
 	def introAgmt(self,a,b,op):
-		self.a = int(a)
-		self.b = int(b)
-		self.op = op
+		try:
+			self.a = int(a)
+			self.b = int(b)
+			self.op = op
+		except ValueError:
+			sys.exit("Non numerical parameters");
 if __name__ == '__main__':
 	Calculadora = CalculadoraPadre();
 	Calculadora.introAgmt(sys.argv[1],sys.argv[3],sys.argv[2])

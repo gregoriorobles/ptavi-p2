@@ -1,7 +1,9 @@
 sumar,2,3,4,5,2
 restar,1,1,1,1,1,1
-multiplicar,1,1,1,1,2
-dividir,1,1,1,1,1,2
-restar,5,5,5,5,5,5
+multiplicar,1,2,1,1,2
+dividir,1,9,1,1,1,2
+restar,5,5,a,5,5,5
 restar,10,10,5,5,6,6,8,8
-
+restar,1000,1
+dividir,1,2,3,0
+multiplicar,1,f
