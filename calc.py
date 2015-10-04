@@ -1,30 +1,40 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-
 import sys
+# Vamos a programar una calculadora
 
+def main():
+	pass
 
-def plus(op1, op2):
-    """ Function to sum the operands """
-    return op1 + op2
+try :
+	if sys.argv[2] == "sumar":
+		main()
+		a = int(sys.argv[1]);
+		b = int(sys.argv[3]);
+		print(a + b); 
 
+	if sys.argv[2] == "restar":
+		main()
+		a = int(sys.argv[1]);
+		b = -int(sys.argv[3]);
+		print(a + b); 
 
-def minus(op1, op2):
-    """ Function to substract the operands """
-    return op1 - op2
+	if sys.argv[2] == "dividir":
+		main()
+		a = int(sys.argv[1]);
+		b = int(sys.argv[3]);
+		try:
+			print(a / b); 
+		except ZeroDivisionError:
+			print("Infinito");
 
-if __name__ == "__main__":
-    try:
-        operando1 = int(sys.argv[1])
-        operando2 = int(sys.argv[3])
-    except ValueError:
-        sys.exit("Error: Non numerical parameters")
+	if sys.argv[2] == "multiplicar":
+		main()
+		a = int(sys.argv[1]);
+		b = int(sys.argv[3]);
+		print(a * b); 
 
-    if sys.argv[2] == "suma":
-        result = plus(operando1, operando2)
-    elif sys.argv[2] == "resta":
-        result = minus(operando1, operando2)
-    else:
-        sys.exit('Operación sólo puede ser sumar o restar.')
+except ValueError:
+	print("Datos invalidos");
+	
 
-    print(result)
