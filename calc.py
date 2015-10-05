@@ -10,8 +10,18 @@ def to_number(num):
             return float(num)
         else:
             return int(num)
-    except:
+    except ValueError:
         sys.exit("Error: Non numerical parameters")
+
+
+def take_args():
+    if len(sys.argv) != 4:
+        sys.exit("Error: incorrect parameters\nUse: script op1 operation op2")
+    else:
+        op1 = to_number(sys.argv[1])
+        operation = sys.argv[2]
+        op2 = to_number(sys.argv[3])
+        return op1, operation, op2
 
 
 def sum(op1, op2):
@@ -31,8 +41,6 @@ def do_operation(operations, operation, op1, op2):
 
 
 if __name__ == "__main__":
+    op1, operation, op2 = take_args()
     operations = {"suma": sum, "resta": substraction}
-    op1 = to_number(sys.argv[1])
-    operation = sys.argv[2]
-    op2 = to_number(sys.argv[3])
     print(do_operation(operations, operation, op1, op2))
