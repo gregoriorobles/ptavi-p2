@@ -29,13 +29,7 @@ if __name__ == "__main__":
                 mult = calcu.multiplica(mult, operaciones)
             print(mult)
         if operador == "divide":
-            if palabra[2] == 0:
-                sys.exit("Division by zero is not allowed")
-            else:
-                div = calcu.divide(palabra[1], palabra[2])
+            div = calcu.divide(palabra[1], palabra[2])
             for operaciones in palabra[3:]:
-                if operaciones == 0:
-                    sys.exit("Division by zero is not allowed")
-                else:
-                    div = calcu.divide(div, operaciones)
+                div = calcu.divide(div, operaciones)
             print(div)
