@@ -39,4 +39,3 @@ if __name__ == "__main__":
                 else:
                     div = calcu.divide(div, operaciones)
             print(div)
-
