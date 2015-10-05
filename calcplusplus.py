@@ -13,23 +13,10 @@ if __name__ == "__main__":
         lineas = csv.reader(csvarchivo)
         for linea in lineas:
             operador = linea[0]
-            if operador == "suma":
-                    sum1 = 0
-                    for operaciones in linea[1:]:
-                        sum1 = calcu.suma(sum1, operaciones)
-                    print(sum1)
-            if operador == "resta":
-                rest1 = calcu.resta(linea[1], linea[2])
-                for operaciones in linea[3:]:
-                    rest1 = calcu.resta(rest1, operaciones)
-                print(rest1)
-            if operador == "multiplica":
-                mult = 1
-                for operaciones in linea[1:]:
-                    mult = calcu.multiplica(mult, operaciones)
-                print(mult)
-            if operador == "divide":
-                div = calcu.divide(linea[1], linea[2])
-                for operaciones in linea[3:]:
-                    div = calcu.divide(div, operaciones)
-                print(div)
+            diccionario = {"suma": calcu.suma, "multiplica": calcu.multiplica, "resta": calcu.resta, "divide": calcu.divide} 
+
+        if operador in ["suma", "multiplica", "resta","divide"]:
+            calcular = palabra[1]
+            for operaciones in palabra[2:]:
+                calcular = diccionario[operador](calcular, operaciones)
+            print(calcular)
