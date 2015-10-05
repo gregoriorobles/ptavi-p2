@@ -8,6 +8,7 @@ import calcoohija
 
 
 if __name__ == "__main__":
+    calcplus.capture_argv_error()
     script, filename = argv
     with open(filename) as file:
         calc = calcoohija.CalculadoraHija()
