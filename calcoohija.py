@@ -7,20 +7,19 @@ import calcoo
 
 class CalculadoraHija (calcoo.Calculadora):
     def multiplica(self, op1, op2):
+        op1, op2 = self.check(op1, op2)
         return op1 * op2
 
     def divide(self, op1, op2):
+        op1, op2 = self.check(op1, op2)
         return op1 / op2
 
 if __name__ == "__main__":
-    try:
-        operando1 = float(sys.argv[1])
-        operando2 = float(sys.argv[3])
-        operacion = sys.argv[2]
-    except ValueError:
-        sys.exit("Error: Non numerical parameters")
 
     calcu = CalculadoraHija()
+    operando1 = sys.argv[1]
+    operando2 = sys.argv[3]
+    operacion = sys.argv[2]
 
     if operacion == "suma":
         resultado = calcu.suma(operando1, operando2)
