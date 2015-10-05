@@ -4,27 +4,26 @@
 import sys
 
 
-def plus(op1, op2):
-    """ Function to sum the operands """
-    return op1 + op2
+def suma(operando1, operando2):
+    return operando1 + operando2
 
 
-def minus(op1, op2):
-    """ Function to substract the operands """
-    return op1 - op2
+def resta(operando1, operando2):
+    return operando1 - operando2
 
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
+        operacion = sys.argv[2]
         operando2 = int(sys.argv[3])
     except ValueError:
         sys.exit("Error: Non numerical parameters")
 
-    if sys.argv[2] == "suma":
-        result = plus(operando1, operando2)
-    elif sys.argv[2] == "resta":
-        result = minus(operando1, operando2)
+    if operacion == "suma":
+        resultado = suma(operando1, operando2)
+    elif operacion == "resta":
+        resultado = resta(operando1, operando2)
     else:
-        sys.exit('Operación sólo puede ser sumar o restar.')
+        sys.exit("operacion no valida")
 
-    print(result)
+    print(resultado)
