@@ -14,7 +14,6 @@ if __name__ == "__main__":
         reader = csv.reader(fichero)
         for ListaNumeros in reader:
 
-#            ListaNumeros = linea.split(",")
             Operacion = ListaNumeros.pop(0)
 
             if Operacion == 'suma':
@@ -24,7 +23,7 @@ if __name__ == "__main__":
                 print(suma)
 
             elif Operacion == 'resta':
-                resta = calchija.minus(int(ListaNumeros[0]), int(ListaNumeros[1]))        
+                resta = calchija.minus(int(ListaNumeros[0]), int(ListaNumeros[1]))
                 for numero in ListaNumeros[2:]:
                     resta = calchija.minus(resta, int(numero))
                 print(resta)
@@ -40,4 +39,3 @@ if __name__ == "__main__":
                 for numero in ListaNumeros[2:]:
                     div = calchija.div(div, int(numero))
                     print(div)
-
