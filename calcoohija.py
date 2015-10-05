@@ -12,7 +12,10 @@ class CalculadoraHija (calcoo.Calculadora):
 
     def divide(self, op1, op2):
         op1, op2 = self.check(op1, op2)
-        return op1 / op2
+        if op2 == 0:
+            sys.exit("Division by zero is not allowed")
+        else:
+            return op1 / op2
 
 if __name__ == "__main__":
 
@@ -28,10 +31,7 @@ if __name__ == "__main__":
     elif operacion == "multiplica":
         resultado = calcu.multiplica(operando1, operando2)
     elif operacion == "divide":
-        if operando2 == 0:
-            sys.exit("Division by zero is not allowed")
-        else:
-            resultado = calcu.divide(operando1, operando2)
+        resultado = calcu.divide(operando1, operando2)
     else:
         print("Operacion no valida")
 
