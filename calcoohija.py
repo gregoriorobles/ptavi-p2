@@ -7,7 +7,6 @@ import calcoo
 
 
 class CalculadoraHija(calcoo.Calculadora):
-
     def __init__(self):
         super().__init__()
         self.operations["multiplica"] = self.multiply
@@ -24,8 +23,7 @@ class CalculadoraHija(calcoo.Calculadora):
 
 
 if __name__ == "__main__":
-    op1 = calc.to_number(sys.argv[1])
-    operation = sys.argv[2]
-    op2 = calc.to_number(sys.argv[3])
+    calc.capture_argv_error()
+    op1, operation, op2 = calc.take_args()
     calc = CalculadoraHija()
     print(calcoo.do_operation(calc, operation, op1, op2))
