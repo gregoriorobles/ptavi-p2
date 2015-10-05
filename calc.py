@@ -3,28 +3,30 @@
 
 import sys
 
+from calcoohija import CalculadoraHija
 
-def plus(op1, op2):
-    """ Function to sum the operands """
-    return op1 + op2
-
-
-def minus(op1, op2):
-    """ Function to substract the operands """
-    return op1 - op2
+ddp = CalculadoraHija()
 
 if __name__ == "__main__":
-    try:
-        operando1 = int(sys.argv[1])
-        operando2 = int(sys.argv[3])
-    except ValueError:
-        sys.exit("Error: Non numerical parameters")
+	
+	try:
+		operando1 = int(sys.argv[1])
+		operando2 = int(sys.argv[3])
+	except ValueError:
+		sys.exit("Error: Non numerical parameters")
 
-    if sys.argv[2] == "suma":
-        result = plus(operando1, operando2)
-    elif sys.argv[2] == "resta":
-        result = minus(operando1, operando2)
-    else:
-        sys.exit('Operación sólo puede ser sumar o restar.')
+	if sys.argv[2] == "suma":
+		result = ddp.plus(operando1, operando2)
+	elif sys.argv[2] == "resta":
+		result = ddp.minus(operando1, operando2)
+	elif sys.argv[2] == "multiplica":
+		result = ddp.mult(operando1, operando2)
+	elif sys.argv[2] == "divide":
+		if operando2 != 0:
+			result = ddp.divide(operando1, operando2)
+		else:
+			sys.exit("Error: Division by zero is not allowed")
+	else:
+		sys.exit('Operación sólo puede ser sumar, restar, multiplicar 			o dividir')
 
-    print(result)
+	print(result)
