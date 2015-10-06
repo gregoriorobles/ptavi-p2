@@ -9,7 +9,7 @@ ddp = CalculadoraHija()
 
 if __name__ == "__main__":
 
-	fich = open('fichero.csv','r')
+	fich = open(sys.argv[1],'r')
 	lines = fich.readlines()
 
 for line in lines:
