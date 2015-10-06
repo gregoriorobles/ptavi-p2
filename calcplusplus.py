@@ -15,4 +15,4 @@ if __name__ == "__main__":
         for line in csv.reader(file):
             operation = line[0]
             numbers = line[1:]
-            calcplus.operating(calc, operations, numbers)
+            calcplus.operating(calc, operation, numbers)
