@@ -6,7 +6,7 @@ import calcoo
 import calcoohija
 
 if __name__ == "__main__":
-    fich = open("prueba.csv","r")
+    fich = open(sys.argv[1],"r")
     lista = fich.readlines()
     num_lineas = len(lista)
     calc = calcoohija.CalculadoraHija()
