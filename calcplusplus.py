@@ -8,7 +8,7 @@ import calcplus
 import csv
 
 
-with open('prueba.csv', newline='') as File:
+with open(sys.argv[1], newline='') as File:
 
     reader = csv.reader(File)
     Calc = calcoohija.CalculadoraHija()
