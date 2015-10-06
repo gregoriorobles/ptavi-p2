@@ -21,7 +21,7 @@ def operating(calc, operation, numbers):
 
 if __name__ == "__main__":
     capture_argv_error()
-    filename = sys.argv[0]
+    filename = sys.argv[1]
     calc = calcoohija.CalculadoraHija()
     file = open(filename)
     for line in file.readlines():
