@@ -9,7 +9,7 @@ from calcoohija import CalculadoraHija
 
 ddp = CalculadoraHija()
 
-with open('fichero.csv','r') as d
+with open(sys.argv[1],'r') as d
 	lines = csv.lines(d)
 
 	for row in lines:
