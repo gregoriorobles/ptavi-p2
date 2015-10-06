@@ -1,6 +1,6 @@
 
 import calcoohija
-
+import sys
 
 def main():
     pass
@@ -12,8 +12,7 @@ class CalculadoraPlus(calcoohija.CalculadoraHija):
 
 if __name__ == '__main__':
     OperacionTotal = 0
-    NombreFichero = "OPERACIONES.CSV"
-    ListaOperaciones = ["Operando1,Operando2,Operacion"]
+    NombreFichero = sys.argv[1]
     Calculadora = CalculadoraPlus()
     Calculadora.leerfichero(NombreFichero)
     for line in Calculadora.fichero:
