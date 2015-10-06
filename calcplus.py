@@ -8,7 +8,7 @@ import calcoohija
 
 if __name__ == "__main__":
     calchija = calcoohija.CalculadoraHija()
-    File = open('prueba.csv', 'r')
+    File = open(sys.argv[1], 'r')
     Lista = File.readlines()  # Devuelve una lista con cada linea del fichero'
     for linea in Lista:
         ListaNumeros = linea.split(",")
