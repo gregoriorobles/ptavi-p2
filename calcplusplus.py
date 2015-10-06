@@ -7,7 +7,7 @@ import calcoohija
 import csv
 import sys
 
-with open(sys.argv[1], 'rd') as f:
+with open(sys.argv[1], 'r') as f:
     lista_lineas = csv.reader(f)
     miCalculadora = calcoohija.CalculadoraHija()
 
