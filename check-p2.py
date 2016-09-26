@@ -25,7 +25,8 @@ python_files = [
     'calcoo.py',
     'calcoohija.py',
     'calcplus.py',
-    'calcplusplus.py'
+    'calcplusplus.py',
+    'esqueleto-oo.py'
     ]
 
 files = ['README.md',
